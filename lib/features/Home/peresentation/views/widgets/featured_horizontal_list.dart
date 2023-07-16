@@ -10,7 +10,7 @@ class FeaturedHorizontalList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(
-        top: 50,
+        top: 47,
       ),
       child: SizedBox(
         height: SizeConfig.defaultSize! * 22,
