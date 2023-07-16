@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
 import '../../../../../core/utils/assets.dart';
-import '../../../../../core/utils/size_config.dart';
 
 class FeaturedHorizontalListItem extends StatelessWidget {
   const FeaturedHorizontalListItem({super.key});
@@ -15,7 +14,7 @@ class FeaturedHorizontalListItem extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16),
-              image: DecorationImage(
+              image: const DecorationImage(
                   fit: BoxFit.fill, image: AssetImage(AssetsData.testPhoto))),
         ),
       ),

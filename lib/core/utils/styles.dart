@@ -1,4 +1,3 @@
-import 'package:bookly_app/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -7,15 +6,14 @@ abstract class Styles {
     fontSize: 18,
     fontWeight: FontWeight.w600,
   );
-  static const textStyle20 = TextStyle(
-    fontSize: 20,
-    fontWeight: FontWeight.bold,
-    fontFamily: kGtsectraFine,
+  static var textStyle20 = GoogleFonts.cormorant(
+    fontSize: 25,
+    fontWeight: FontWeight.w800,
   );
-  static const textStyle30 = TextStyle(
+
+  static var textStyle30 = GoogleFonts.cormorant(
     fontSize: 30,
     fontWeight: FontWeight.w600,
-    fontFamily: kGtsectraFine,
   );
   static const textStyle16 = TextStyle(
     fontSize: 16,
