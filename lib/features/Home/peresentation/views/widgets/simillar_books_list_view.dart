@@ -14,7 +14,7 @@ class SimillarBooksListView extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemCount: 5,
         itemBuilder: (context, index) {
-          return FeaturedHorizontalListItem();
+          return const FeaturedHorizontalListItem();
         },
       ),
     );
