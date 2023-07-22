@@ -1,11 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/assets.dart';
-
 class FeaturedHorizontalListItem extends StatelessWidget {
-  const FeaturedHorizontalListItem({super.key});
-
+  const FeaturedHorizontalListItem({super.key, required this.imageUrl});
+  final String imageUrl;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -14,10 +12,13 @@ class FeaturedHorizontalListItem extends StatelessWidget {
         aspectRatio: 2.7 / 4.5,
         child: Container(
           decoration: BoxDecoration(
-              border: Border.all(width: 1, color: Color(0xff707070)),
-              borderRadius: BorderRadius.circular(16),
-              image: const DecorationImage(
-                  fit: BoxFit.fill, image: AssetImage(AssetsData.testPhoto))),
+            border: Border.all(width: 1, color: const Color(0xff707070)),
+            borderRadius: BorderRadius.circular(16),
+            image: DecorationImage(
+              fit: BoxFit.fill,
+              image: NetworkImage(imageUrl),
+            ),
+          ),
         ),
       ),
     );
