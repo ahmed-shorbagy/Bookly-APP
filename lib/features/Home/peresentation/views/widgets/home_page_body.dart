@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/styles.dart';
-import 'best_seller_List_view.dart';
+import 'Newest_books_List_view.dart';
 
 import 'custom_app_bar.dart';
 import 'featured_horizontal_list.dart';
@@ -15,6 +15,7 @@ class HomePageBody extends StatelessWidget {
     return const Padding(
       padding: EdgeInsets.only(left: 30),
       child: CustomScrollView(
+        physics: BouncingScrollPhysics(),
         slivers: [
           SliverToBoxAdapter(
             child: Column(
@@ -25,7 +26,7 @@ class HomePageBody extends StatelessWidget {
                 SizedBox(
                   height: 51,
                 ),
-                Text('Best Seller', style: Styles.textStyle18),
+                Text('Newest Books', style: Styles.textStyle18),
                 SizedBox(
                   height: 20,
                 ),
@@ -33,7 +34,7 @@ class HomePageBody extends StatelessWidget {
             ),
           ),
           SliverFillRemaining(
-            child: BestSellerListView(),
+            child: NewestBooksListView(),
           )
         ],
       ),

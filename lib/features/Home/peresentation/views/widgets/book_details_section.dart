@@ -17,7 +17,7 @@ class BookDetailsSection extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(
               horizontal: SizeConfig.defaultSize! * 11, vertical: 25),
-          child: const FeaturedHorizontalListItem(
+          child: const CustomBookImage(
               imageUrl: 'https://loremflickr.com/640/360'),
         ),
         const SizedBox(
