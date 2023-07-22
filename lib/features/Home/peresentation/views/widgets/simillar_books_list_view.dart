@@ -8,7 +8,9 @@ import '../../../../../core/utils/size_config.dart';
 import 'featured_list_item.dart';
 
 class SimillarBooksListView extends StatelessWidget {
-  const SimillarBooksListView({super.key});
+  const SimillarBooksListView({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +23,11 @@ class SimillarBooksListView extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemCount: state.books.length,
               itemBuilder: (context, index) {
-                return const CustomBookImage(
-                  imageUrl: 'https://loremflickr.com/640/360',
+                return CustomBookImage(
+                  book: state.books[index],
+                  imageUrl:
+                      (state.books[index].volumeInfo?.imageLinks?.thumbnail) ??
+                          'https://loremflickr.com/640/360',
                 );
               },
             ),

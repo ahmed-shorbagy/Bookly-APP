@@ -1,7 +1,6 @@
 import 'package:bookly_app/features/Home/data/Models/book_model/book_model.dart';
 import 'package:bookly_app/features/Home/peresentation/manager/similar_books_cubit/similar_books_cubit.dart';
 import 'package:bookly_app/features/Home/peresentation/views/widgets/Book_details_view_body.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -23,8 +22,8 @@ class _BookDetailsViewState extends State<BookDetailsView> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: BookDetailsViewBody(),
+    return Scaffold(
+      body: BookDetailsViewBody(book: widget.book),
     );
   }
 }

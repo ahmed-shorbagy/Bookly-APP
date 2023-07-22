@@ -26,6 +26,7 @@ class FeaturedHorizontalList extends StatelessWidget {
                 itemCount: state.books.length,
                 itemBuilder: (context, index) {
                   return CustomBookImage(
+                    book: state.books[index],
                     imageUrl: (state
                             .books[index].volumeInfo?.imageLinks?.thumbnail) ??
                         'https://loremflickr.com/640/360',

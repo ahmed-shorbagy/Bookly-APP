@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 
 class CustomBookDetailsViewAppBar extends StatelessWidget {
   const CustomBookDetailsViewAppBar({super.key});
@@ -10,7 +10,11 @@ class CustomBookDetailsViewAppBar extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        IconButton(onPressed: () {}, icon: const Icon(Icons.close)),
+        IconButton(
+            onPressed: () {
+              GoRouter.of(context).pop();
+            },
+            icon: const Icon(Icons.close)),
         IconButton(
             onPressed: () {}, icon: const Icon(FontAwesomeIcons.cartShopping))
       ],

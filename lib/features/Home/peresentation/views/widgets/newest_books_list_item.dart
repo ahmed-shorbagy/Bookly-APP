@@ -26,6 +26,7 @@ class NewestBooksListITem extends StatelessWidget {
             AspectRatio(
                 aspectRatio: 3.2 / 4,
                 child: CustomBookImage(
+                  book: book,
                   imageUrl: (book.volumeInfo?.imageLinks?.thumbnail) ??
                       'https://loremflickr.com/640/360',
                 )),
